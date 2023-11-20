@@ -3,3 +3,10 @@ variable "role_name" {
   description = "name of the role"
 
 }
+
+variable "ami" {
+
+  type = string
+  default = "ami-0c55b159cbfafe1f0"
+
+}
