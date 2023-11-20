@@ -1,2 +1,4 @@
 myfile.txt
 test.yml
+.terraform
+.terraform.lock.hcl

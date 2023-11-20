@@ -1,12 +1,12 @@
 variable "role_name" {
-  type    = string
+  type        = string
   description = "name of the role"
 
 }
 
 variable "ami" {
 
-  type = string
+  type    = string
   default = "ami-0c55b159cbfafe1f0"
 
 }
