@@ -1,42 +1,40 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0  # The version of the pre-commit hooks repository
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
-    -   id: name-tests-test
-    -   id: detect-aws-credentials
+      - id: check-yaml  # Checks for valid YAML formatting
+      - id: end-of-file-fixer  # Ensures the file ends with a newline
+      - id: trailing-whitespace  # Removes trailing whitespace
+      - id: name-tests-test  # Ensures that test files follow proper naming conventions
+      - id: detect-aws-credentials  # Detects if AWS credentials are committed by mistake
         args:
-        - --allow-missing-credentials
+          - --allow-missing-credentials  # Allows skipping credentials detection when missing
 
--   repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.83.6
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.83.6  # Terraform hooks version
     hooks:
-    -   id: terraform_fmt
-    -   id: terraform_validate
+      - id: terraform_fmt  # Automatically formats Terraform files
+      - id: terraform_validate  # Validates Terraform configuration files
 
-
--   repo: https://github.com/psf/black
-    rev: 23.11.0
+  - repo: https://github.com/psf/black
+    rev: 23.11.0  # Black version
     hooks:
-    -   id: black
+      - id: black  # Formats Python code according to Black's style guide
 
-
--   repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.1
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.1  # Gitleaks version
     hooks:
-    -   id: gitleaks
+      - id: gitleaks  # Detects hardcoded secrets in codebase
 
--   repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 3.0.0
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0  # Jumanjihouse hooks version
     hooks:
-    -   id: forbid-binary
-    -   id: shellcheck
-    -   id: shfmt
+      - id: forbid-binary  # Prevents committing binary files
+      - id: shellcheck  # Lints shell scripts for errors
+      - id: shfmt  # Formats shell scripts
 
--   repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.4
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.4  # Lucas-C hooks version
     hooks:
-    -   id: forbid-crlf
-    -   id: remove-crlf
+      - id: forbid-crlf  # Ensures that no CRLF line endings are present
+      - id: remove-crlf  # Converts CRLF line endings to LF
